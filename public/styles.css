@@ -34,12 +34,12 @@ ul {
 /* index styles */
 .logo {
     color: rgb(255, 255, 255);
-    font-family: 'HELLO DENVER DISPLAY BOLD', sans-serif;
+    font-family: 'HELLO DENVER DISPLAY REGULAR', sans-serif;
     background-color: rgba(0, 0, 0, 0);
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-size: 100px;
+    font-size: 60px;
     text-shadow: 0 0 7px rgb(0, 22, 202),
         0 0 10px rgb(0, 22, 202),
         0 0 21px rgb(0, 22, 202),
