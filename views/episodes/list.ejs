@@ -1,0 +1,31 @@
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+
+    <body>
+
+        <%- include('../partials/nav.ejs') %>
+
+            <div class="episodes content">
+                <h1 class="neonText">ALL EPISODES</h1>
+
+                <% if (episodes.length> 0) {%>
+                    <% episodes.forEach(episode=> { %>
+                        <a class="single" href="/episodes/<%=episode._id %> " style="border-radius: 25px;">
+                            <h2 class="title" style="border-radius: 25px;">
+                                <%=episode.title%> - <%=episode.subtitle%>
+                            </h2>
+                            <h3 class="desc" style="border-radius: 25px; background-color: rgb(38, 38, 40);">
+                                <%= episode.description %>
+                            </h3>
+                        </a>
+                        <%})%>
+                            <% } else { %>
+                                <p>There are no episodes to display</p>
+                                <% }%>
+
+            </div>
+
+            <%- include('../partials/footer.ejs') %>
+    </body>
+
+</html>

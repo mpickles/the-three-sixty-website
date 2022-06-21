@@ -1,0 +1,28 @@
+<html lang="en">
+<%- include("../partials/head.ejs") %>
+
+    <body>
+        <%- include("../partials/nav.ejs") %>
+
+            <div class="details content">
+                <h1>
+                    <%= episode.title %> - <%= episode.subtitle %>
+                </h1>
+                <p class="desc">
+                    <%= episode.description %>
+                </p>
+            </div>
+            <div>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/episode/<%=episode.link%>?utm_source=generator&theme=0"
+                    width="100%" height="232" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
+
+            </div>
+
+            <%- include("../partials/footer.ejs") %>
+
+    </body>
+
+</html>

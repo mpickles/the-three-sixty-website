@@ -1,0 +1,25 @@
+<html lang="en">
+
+<%- include('../partials/head.ejs') %>
+
+    <body>
+
+        <%- include('../partials/nav.ejs') %>
+
+            <div class="create-episode content">
+                <form action="/episodes" method="POST">
+                    <label for="title" class="headerCon">Episode Title:</label>
+                    <input type="text" id="title" name="title" style="background-color:white" required>
+                    <label for=" subtitle" class="headerCon">Subtitle:</label>
+                    <input type="subtitle" id="subtitle" name="subtitle" style="background-color:white" required>
+                    <label for="description" class="headerCon">Description:</label>
+                    <textarea id="description" name="description" style="background-color:white" required></textarea>
+                    <label for="link" class="headerCon">Link:</label>
+                    <input id="link" name="link" style="background-color:white" required></input>
+                    <button>Submit</button>
+                </form>
+            </div>
+            <%- include('../partials/footer.ejs') %>
+    </body>
+
+</html>
