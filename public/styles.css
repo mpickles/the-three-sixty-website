@@ -3,6 +3,13 @@
 
 body {
     background-color: rgb(22, 22, 24);
+    background-image: url(logo.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width: auto;
+    height: auto;
     max-width: 1200px;
     margin: 20px auto;
     padding: 0 20px;
@@ -21,7 +28,8 @@ ul {
     color: rgb(255, 255, 255);
 }
 
-.home {
+
+/* .home {
     background-image: url(logo.png);
     background-size: 50%;
     background-repeat: no-repeat;
@@ -29,7 +37,7 @@ ul {
     background-position: center;
     width: auto;
     height: auto;
-}
+} */
 
 /* index styles */
 .logo {
@@ -40,19 +48,21 @@ ul {
     padding: 0;
     text-decoration: none;
     font-size: 60px;
-    text-shadow: 0 0 7px rgb(0, 22, 202),
-        0 0 10px rgb(0, 22, 202),
-        0 0 21px rgb(0, 22, 202),
-        0 0 42px rgb(0, 22, 202),
-        0 0 82px rgb(0, 22, 202),
-        0 0 92px rgb(0, 22, 202),
-        0 0 102px rgb(0, 22, 202),
-        0 0 151px rgb(0, 22, 202);
+    font-weight: lighter;
+    text-shadow: 0 0 7px rgb(17, 41, 223),
+        0 0 10px rgb(17, 41, 223),
+        0 0 21px rgb(17, 41, 223),
+        0 0 42px rgb(17, 41, 223),
+        0 0 82px rgb(17, 41, 223),
+        0 0 92px rgb(17, 41, 223),
+        0 0 102px rgb(17, 41, 223),
+        0 0 151px rgb(17, 41, 223);
 }
 
 .neonText {
     color: rgb(255, 255, 255);
-    font-family: 'HELLO DENVER DISPLAY BOLD', sans-serif;
+    font-family: 'HELLO DENVER DISPLAY REGULAR', sans-serif;
+    font-weight: lighter;
     margin: 0;
     padding: 0;
     /* background-color: rgb(10, 231, 220); */
@@ -70,12 +80,6 @@ ul {
         0 0 92px rgb(0, 22, 202),
         0 0 102px rgb(0, 22, 202),
         0 0 151px rgb(0, 22, 202);
-}
-
-.banner {
-    /* background-color: rgb(138, 141, 0); */
-    width: auto;
-    height: auto;
 }
 
 .headerCon {
@@ -97,6 +101,8 @@ ul {
     margin: 0;
     padding: 10px;
     word-wrap: break-word;
+    border-radius: 25px;
+    background-color: rgb(27, 27, 32);
 }
 
 
@@ -104,8 +110,9 @@ ul {
     display: block;
     margin: 40px 0;
     padding-left: 50px;
+    padding-top: 10px;
     border-left: 10px solid rgb(255, 39, 255);
-    background-color: rgb(38, 38, 40);
+    background-color: rgb(27, 27, 32);
 }
 
 .episodes a:hover {
@@ -202,11 +209,9 @@ textarea {
 }
 
 .footer {
-    position: fixed;
-    margin: auto;
+    position: relative;
+    margin: 20px auto;
     width: 100%;
     bottom: 0;
     text-align: center;
-
-
 }

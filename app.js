@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const Episode = require('./models/episode');
 const episodeRoutes = require('./routes/episodeRoutes')
 
 // express app
@@ -24,10 +25,24 @@ app.use((req, res, next) => {
     next();
 });
 
+const episode_index_home = (req, res) => {
+    Episode.find().sort({ createdAt: -1 })
+        .then(result => {
+            res.render('index.ejs', { latest_episode: result[0], title: '' });
+        })
+        .catch(err => {
+            console.log(err);
+        });
+}
+
+
 // routes
-app.get('/', (req, res) => {
-    res.render('index', { title: 'Home' })
-});
+// app.get('/', (req, res) => {
+//     res.render('index', { title: 'Home' })
+//     app.Router().get('/', episode_index_home);
+// });
+
+app.get('/', episode_index_home);
 
 app.get('/about', (req, res) => {
     res.render('about', { title: 'About' });
