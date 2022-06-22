@@ -10,7 +10,8 @@
 
                 <% if (episodes.length> 0) {%>
                     <% episodes.forEach(episode=> { %>
-                        <a class="single" href="/episodes/<%=episode._id %> " style="border-radius: 25px;">
+                        <a class="single" href="/episodes/<%=episode._id %> "
+                            style="border-radius: 25px; padding: 10px">
                             <h2 class="title" style="border-radius: 25px;">
                                 <%=episode.title%> - <%=episode.subtitle%>
                             </h2>

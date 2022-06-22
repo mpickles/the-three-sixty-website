@@ -1,18 +1,47 @@
 @import url('http://fonts.cdnfonts.com/css/hello-denver-display');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap');
 
+:root {
+    --font: 'HELLO DENVER DISPLAY REGULAR', sans-serif;
+
+    --blue: rgb(31, 81, 255);
+
+    --purple: rgb(223, 0, 254);
+
+    --bg: rgb(17, 17, 18);
+
+    --blue-glow: 0 0 7px var(--blue),
+        0 0 10px var(--blue),
+        0 0 21px var(--blue),
+        0 0 42px var(--blue),
+        0 0 82px var(--blue),
+        0 0 92px var(--blue),
+        0 0 102px var(--blue),
+        0 0 151px var(--blue);
+
+    --purple-glow: 0 0 7px var(--purple),
+        0 0 10px var(--purple),
+        0 0 21px var(--purple),
+        0 0 42px var(--purple),
+        0 0 82px var(--purple),
+        0 0 92px var(--purple),
+        0 0 102px var(--purple),
+        0 0 151px var(--purple);
+}
+
 body {
-    background-color: rgb(22, 22, 24);
-    background-image: url(logo.png);
-    background-size: 50%;
+    /* background-color: rgb(17, 17, 18); */
+    background-image: url(bg3.jpg);
+    background-size: auto;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     width: auto;
     height: auto;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
+    max-width: em;
+    margin: 0px auto;
+    padding-left: 50px;
+    padding-right: 50px;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
@@ -21,83 +50,144 @@ h1,
 h2,
 h3,
 a,
-ul {
+ul,
+figcaption {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 
-/* .home {
-    background-image: url(logo.png);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    width: auto;
-    height: auto;
-} */
-
-/* index styles */
+/* navbar styles */
 .logo {
-    color: rgb(255, 255, 255);
-    font-family: 'HELLO DENVER DISPLAY REGULAR', sans-serif;
-    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    font-family: var(--font);
+    background-color: transparent;
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-size: 60px;
+    font-size: 100px;
     font-weight: lighter;
-    text-shadow: 0 0 7px rgb(17, 41, 223),
-        0 0 10px rgb(17, 41, 223),
-        0 0 21px rgb(17, 41, 223),
-        0 0 42px rgb(17, 41, 223),
-        0 0 82px rgb(17, 41, 223),
-        0 0 92px rgb(17, 41, 223),
-        0 0 102px rgb(17, 41, 223),
-        0 0 151px rgb(17, 41, 223);
+    text-shadow: var(--blue-glow);
+    animation: animateLogo 20s infinite alternate;
 }
 
-.neonText {
-    color: rgb(255, 255, 255);
-    font-family: 'HELLO DENVER DISPLAY REGULAR', sans-serif;
-    font-weight: lighter;
-    margin: 0;
-    padding: 0;
-    /* background-color: rgb(10, 231, 220); */
-    width: fit-content;
-    text-decoration: none;
-    font-size: 60px;
-    position: relative;
-    position: relative;
-    bottom: 20px;
-    text-shadow: 0 0 7px rgb(0, 22, 202),
-        0 0 10px rgb(0, 22, 202),
-        0 0 21px rgb(0, 22, 202),
-        0 0 42px rgb(0, 22, 202),
-        0 0 82px rgb(0, 22, 202),
-        0 0 92px rgb(0, 22, 202),
-        0 0 102px rgb(0, 22, 202),
-        0 0 151px rgb(0, 22, 202);
+@keyframes animateLogo {
+    40% {
+        opacity: 1
+    }
+
+    40.5% {
+        opacity: 0.8;
+    }
+
+    41% {
+        opacity: 1;
+    }
+
+    42% {
+        opacity: 0.3;
+    }
+
+    43% {
+        opacity: 1;
+    }
+}
+
+.title {
+    color: white;
+    margin: 0px;
+    padding: 0px;
 }
 
 .headerCon {
-    color: rgb(255, 255, 255);
+    color: white;
     margin: 0;
     padding: 0;
     display: block;
     font-size: 25px;
 }
 
-.title {
-    color: rgb(255, 255, 255);
-    margin: 0px;
-    padding: 0px;
+/* index styles */
+.host {
+    text-align: center;
+}
+
+.hostIMG {
+    width: 256px;
+    height: 256px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.hostIMG:hover {
+    box-shadow: 0px 0px 20px 10px var(--purple);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.neonText {
+    color: white;
+    font-family: var(--font);
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    text-decoration: none;
+    font-size: 60px;
+    position: relative;
+    position: relative;
+    bottom: 20px;
+    text-shadow: var(--blue-glow)
+}
+
+/* episode styles */
+.epiTitle {
+    color: white;
+    font-family: var(--font);
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    font-size: 60px;
+    position: relative;
+    position: relative;
+    text-shadow: var(--purple-glow);
+}
+
+@keyframes animateEpi {
+    40% {
+        opacity: 1
+    }
+
+    42% {
+        opacity: 0.8;
+    }
+
+    43% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 0.3;
+    }
+
+    46% {
+        opacity: 1;
+    }
+}
+
+.spotMain {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    position: center;
 }
 
 .desc {
-    color: rgb(255, 255, 255);
+    color: white;
     margin: 0;
     padding: 10px;
     word-wrap: break-word;
@@ -105,19 +195,20 @@ ul {
     background-color: rgb(27, 27, 32);
 }
 
-
 .episodes a {
     display: block;
     margin: 40px 0;
     padding-left: 50px;
     padding-top: 10px;
-    border-left: 10px solid rgb(255, 39, 255);
+    border-left: 10px solid rgb(223, 0, 254);
     background-color: rgb(27, 27, 32);
 }
 
 .episodes a:hover {
-    color: rgb(0, 22, 202);
-    box-shadow: 0px 0px 20px 20px rgb(255, 39, 255);
+    color: var(--blue);
+    box-shadow: 0px 0px 20px 20px var(--purple);
+    transform: scale(1.01);
+    transition: 0.5s;
 }
 
 /* details styles */
@@ -175,6 +266,7 @@ h3 {
     margin-left: 20px;
 }
 
+/* create episode styles */
 .create-episode form {
 
     max-width: 400px;
@@ -200,7 +292,7 @@ textarea {
 
 .create-episode button {
     margin-top: 20px;
-    background: rgb(255, 255, 255);
+    background: white;
     color: black;
     padding: 6px;
     border: 0;
@@ -214,4 +306,43 @@ textarea {
     width: 100%;
     bottom: 0;
     text-align: center;
+}
+
+.ico ul {
+    position: relative;
+    display: flex;
+    gap: 50px;
+}
+
+.ico ul li {
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5;
+}
+
+.ico ul li:hover {
+    z-index: 10000;
+    transform: scale(0.9);
+    transition: 0.5s;
+}
+
+
+.ico ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--clr);
+    z-index: 10;
+    font-size: 6em;
+    transition: .5s;
+}
+
+.ico ul li:hover a {
+    font-size: 6em;
+    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr))
 }

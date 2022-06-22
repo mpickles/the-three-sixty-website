@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 const episode_index_home = (req, res) => {
     Episode.find().sort({ createdAt: -1 })
         .then(result => {
-            res.render('index.ejs', { latest_episode: result[0], title: '' });
+            res.render('index.ejs', { latest_episode: result[0], title: 'Home' });
         })
         .catch(err => {
             console.log(err);

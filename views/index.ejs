@@ -1,28 +1,38 @@
 <html lang="en">
 <%- include('./partials/head.ejs') %>
 
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+
     <body class="home">
 
         <%- include('./partials/nav.ejs') %>
 
             <div class="episodes content">
                 <h1 class=" neonText">LATEST EPISODE</h1>
-                <div style="background-color: rgb(27, 27, 32); 
-                width:fit-;
+                <div class="desc" style="background-color: transparent;">
+                    <!-- width:fit-;
                 margin-left: 40px 0;
                 padding-left: 50px;
                 border-top-right-radius: 25px;
-                border-top-left-radius: 25px;">
-                    <h1>
+                border-top-left-radius: 25px;
+                border-bottom-right-radius:0;
+                border-bottom-left-radius:0;"> -->
+
+                    <h1 class="epiTitle" style="animation: animateEpi 5s infinite alternate;">
                         <%= latest_episode.title %> - <%= latest_episode.subtitle %>
                     </h1>
-                    <p class=" desc" style="font-size: large;">
+                    <p class=" desc" style="font-size: larger; background-color: transparent;">
                         <%= latest_episode.description %>
                     </p>
                 </div>
             </div>
             <div style="padding-bottom: 50px;">
-                <iframe style="border-radius:12px; position: center;"
+                <iframe class="spotMain"
                     src="https://open.spotify.com/embed/episode/<%=latest_episode.link%>?utm_source=generator&theme=0"
                     width="100%" height="232" frameBorder="0" allowfullscreen=""
                     allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
@@ -30,38 +40,67 @@
             </div>
             <div style="padding-bottom: 50px;">
                 <h1 class="neonText">
-                    NEWS
+                    HOSTS
                 </h1>
-                <p style="font-size: larger; background-color: black;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+
+                <div style="display:flex">
+                    <figure class="host">
+                        <a href="https://www.instagram.com/evan_couch33/">
+                            <img class="hostIMG" src="generic-hispanic-boy.jpg" hspace="auto" alt="Evan">
+                            <figcaption>
+                                <h1 class="epiTitle">EVAN COUCH</h1>
+                            </figcaption>
+                        </a>
+                    </figure>
+
+                    <figure class="host">
+                        <a href="https://www.instagram.com/brevinross/">
+                            <img class="hostIMG" src="generic-white-boy.jpg" hspace="auto" alt="Brevin">
+                            <figcaption>
+                                <h1 class="epiTitle">BREVIN ROSS</h1>
+                            </figcaption>
+                        </a>
+                    </figure>
+
+                    <figure class="host">
+                        <a href="https://www.instagram.com/max_pickles/">
+                            <img class="hostIMG" src="generic-asian-boy.png" hspace="auto" alt="Max">
+                            <figcaption>
+                                <h1 class="epiTitle">MAX PICKARD</h1>
+                            </figcaption>
+                        </a>
+                    </figure>
+                </div>
+
             </div>
-            <div>
-                <h1 class="neonText">
-                    FOLLOW US
-                </h1>
-                <a href="https://www.instagram.com/thethreesixo/">
-                    <img src="\public\logo.png" width="128" height="128" alt="Instagram Logo"></a>
-                <%- include('./partials/footer.ejs') %>
+
+            <h1 class="neonText">
+                FOLLOW US
+            </h1>
+            <div class="ico">
+                <ul>
+                    <li style="--clr:#c32aa3">
+                        <a href="https://www.instagram.com/thethreesixo/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li style="--clr:#25d366">
+                        <a href="https://open.spotify.com/show/6ZkUOZ48U44T4pnxuewZ04?si=44af767836384039">
+                            <i class="fa-brands fa-spotify"></i>
+                        </a>
+                    </li>
+                    <li style="--clr:#ff0000">
+                        <a href="https://open.spotify.com/show/6ZkUOZ48U44T4pnxuewZ04?si=44af767836384039">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+
+
+
+            </div>
+
+            <%- include('./partials/footer.ejs') %>
     </body>
 
 </html>
