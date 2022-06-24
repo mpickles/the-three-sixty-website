@@ -1,0 +1,39 @@
+/* social media  */
+.ico ul {
+    position: relative;
+    display: flex;
+    gap: 50px;
+}
+
+.ico ul li {
+    position: relative;
+    list-style: none;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5;
+}
+
+.ico ul li:hover {
+    z-index: 10000;
+    transform: scale(0.9);
+    transition: 0.5s;
+}
+
+
+.ico ul li a {
+    position: relative;
+    text-decoration: none;
+    color: var(--clr);
+    z-index: 10;
+    font-size: 6em;
+    transition: .5s;
+}
+
+.ico ul li:hover a {
+    font-size: 6em;
+    filter: drop-shadow(0 0 20px var(--clr)) drop-shadow(0 0 40px var(--clr)) drop-shadow(0 0 60px var(--clr))
+}

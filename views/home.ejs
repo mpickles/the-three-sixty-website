@@ -1,0 +1,125 @@
+<html lang="en">
+<%- include('./partials/head.ejs') %>
+
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body class="home">
+        <%- include('./partials/nav.ejs') %>
+
+            <!-- Latest Episode  -->
+            <div class="episodes content">
+                <h1 class=" neonText" style="--int:23s; --clr: var(--blue);">LATEST EPISODE</h1>
+                <div class="desc" style="background-color: transparent;">
+                    <h1 class="epiTitle" style="--int:5s; --clr: var(--purple)">
+                        <%= latest_episode.title %> - <%= latest_episode.subtitle %>
+                    </h1>
+                    <p class=" desc" style="font-size: larger; background-color: transparent;">
+                        <%= latest_episode.description %>
+                    </p>
+                </div>
+            </div>
+            <div style="padding-bottom: 50px;">
+                <iframe class="spotMain"
+                    src="https://open.spotify.com/embed/episode/<%=latest_episode.link%>?utm_source=generator&theme=0"
+                    width="100%" height="232" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+                </iframe>
+            </div>
+
+            <!-- Playlist Section  -->
+            <div class='playlist'>
+                <h1 class=" neonText" style="--int:60s; 
+                --clr:#25d366; 
+                text-shadow: 0 0 7px var(--clr),
+                0 0 10px var(--clr),
+                0 0 21px var(--clr),
+                0 0 42px var(--clr),
+                0 0 82px var(--clr),
+                0 0 92px var(--clr),
+                0 0 102px var(--clr),
+                0 0 151px var(--clr);">OUR SONGS OF THE WEEK</h1>
+                <div style=" padding-bottom:50px ;">
+                    <iframe style="border-radius:12px"
+                        src="https://open.spotify.com/embed/playlist/3uQpsRlRocVpjdtED8iwJz?utm_source=generator"
+                        width="100%" height="380" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                </div>
+            </div>
+
+            <!-- Social Media Feed  -->
+            <div class='social-media-feed'>
+                <h1 class=" neonText" style="--int:21s; --clr: var(--blue)">SOCIAL MEDIA FEED</h1>
+                <div style="padding-bottom: 50px;">
+
+                </div>
+            </div>
+
+            <!-- Host Section  -->
+            <div style="padding-bottom: 50px;">
+                <h1 class="neonText" style="--int:16s; --clr: var(--blue);">
+                    HOSTS
+                </h1>
+                <div style="display:flex">
+                    <figure class="host">
+                        <a href="https://www.instagram.com/evan_couch33/">
+                            <img class="hostIMG" src="images/generic-hispanic-boy.jpg" hspace="auto" alt="Evan"
+                                style="--clr:#fc0e34">
+                            <figcaption>
+                                <h1 class="epiTitle" style="--int:3s; --clr:#fc0e34">EVAN COUCH</h1>
+                            </figcaption>
+                        </a>
+                    </figure>
+                    <figure class=" host">
+                        <a href="https://www.instagram.com/brevinross/">
+                            <img class="hostIMG" src="images/Brevin.jpg" hspace="auto" alt="Brevin"
+                                style="--clr:#21fc0d">
+                            <figcaption>
+                                <h1 class="epiTitle" style="--int:9s; --clr:#21fc0d">BREVIN ROSS</h1>
+                            </figcaption>
+                        </a>
+                    </figure>
+                    <figure class="host">
+                        <a href="https://www.instagram.com/max_pickles/">
+                            <img class="hostIMG" src="images/max.jpg" hspace="auto" alt="Max" style="--clr:#04d9ff">
+                            <figcaption>
+                                <h1 class="epiTitle" style="--int:15s; --clr:#04d9ff">MAX PICKARD</h1>
+                            </figcaption>
+                        </a>
+                    </figure>
+                </div>
+            </div>
+            <h1 class="neonText" style="--int:31s; --clr: var(--blue);">
+                FOLLOW US
+            </h1>
+            <div class="ico">
+                <ul>
+                    <li style="--clr:#c32aa3">
+                        <a href="https://www.instagram.com/thethreesixo/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li style="--clr:#25d366">
+                        <a href="https://open.spotify.com/show/6ZkUOZ48U44T4pnxuewZ04?si=44af767836384039">
+                            <i class="fa-brands fa-spotify"></i>
+                        </a>
+                    </li>
+                    <li style="--clr:#ff0000">
+                        <a href="https://www.youtube.com/watch?v=gWZEkVV9EO0">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li style="--clr:#1da1f2">
+                        <a href="https://twitter.com/?lang=en">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <%- include('./partials/footer.ejs') %>
+    </body>
+
+</html>

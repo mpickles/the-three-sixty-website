@@ -1,0 +1,148 @@
+@import url('http://fonts.cdnfonts.com/css/hello-denver-display');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap');
+
+:root {
+    --font: 'HELLO DENVER DISPLAY REGULAR', sans-serif;
+
+    --blue: rgb(31, 81, 255);
+
+    --purple: rgb(223, 0, 254);
+
+    --bg: rgb(17, 17, 18);
+
+    --blue-glow: 0 0 7px var(--blue),
+        0 0 10px var(--blue),
+        0 0 21px var(--blue),
+        0 0 42px var(--blue),
+        0 0 82px var(--blue),
+        0 0 92px var(--blue),
+        0 0 102px var(--blue),
+        0 0 151px var(--blue);
+
+    --purple-glow: 0 0 7px var(--purple),
+        0 0 10px var(--purple),
+        0 0 21px var(--purple),
+        0 0 42px var(--purple),
+        0 0 82px var(--purple),
+        0 0 92px var(--purple),
+        0 0 102px var(--purple),
+        0 0 151px var(--purple);
+}
+
+body {
+    background-image: url(/images/bg.jpg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width: auto;
+    height: auto;
+    max-width: em;
+    margin: 0px auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+a,
+ul,
+figcaption {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+}
+
+.neonText {
+    color: white;
+    font-family: var(--font);
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    text-decoration: none;
+    font-size: 60px;
+    position: relative;
+    position: relative;
+    bottom: 20px;
+    text-shadow: 0 0 7px var(--clr),
+        0 0 10px var(--clr),
+        0 0 21px var(--clr),
+        0 0 42px var(--clr),
+        0 0 82px var(--clr),
+        0 0 92px var(--clr),
+        0 0 102px var(--clr),
+        0 0 151px var(--clr);
+    animation: animate 10s var(--int) infinite alternate;
+}
+
+/* navbar styles */
+.logo {
+    color: white;
+    font-family: var(--font);
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 100px;
+    font-weight: lighter;
+    text-shadow: var(--blue-glow);
+    animation: animateLogo 45s var(--int) infinite alternate;
+}
+
+.sub {
+    color: white;
+    font-family: var(--font);
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: lighter;
+    text-shadow: var(--purple-glow);
+}
+
+.title {
+    color: white;
+    margin: 0px;
+    padding: 0px;
+}
+
+.headerCon {
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 25px;
+}
+
+/* host styles */
+.host {
+    text-align: center;
+}
+
+.hostIMG {
+    width: 256px;
+    height: 256px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+.hostIMG:hover {
+    box-shadow: 0px 0px 20px 10px var(--clr);
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.footer {
+    position: relative;
+    margin: 20px auto;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}

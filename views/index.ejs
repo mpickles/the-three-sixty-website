@@ -7,100 +7,28 @@
             crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
-
-    <body class="home">
-
-        <%- include('./partials/nav.ejs') %>
-
-            <div class="episodes content">
-                <h1 class=" neonText">LATEST EPISODE</h1>
-                <div class="desc" style="background-color: transparent;">
-                    <!-- width:fit-;
-                margin-left: 40px 0;
-                padding-left: 50px;
-                border-top-right-radius: 25px;
-                border-top-left-radius: 25px;
-                border-bottom-right-radius:0;
-                border-bottom-left-radius:0;"> -->
-
-                    <h1 class="epiTitle" style="animation: animateEpi 5s infinite alternate;">
-                        <%= latest_episode.title %> - <%= latest_episode.subtitle %>
-                    </h1>
-                    <p class=" desc" style="font-size: larger; background-color: transparent;">
-                        <%= latest_episode.description %>
-                    </p>
-                </div>
+    <body>
+        <div class="centerABS">
+            <div>
+                <img src="images/logo.png" class="indexIMG">
             </div>
-            <div style="padding-bottom: 50px;">
-                <iframe class="spotMain"
-                    src="https://open.spotify.com/embed/episode/<%=latest_episode.link%>?utm_source=generator&theme=0"
-                    width="100%" height="232" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-                </iframe>
+            <div style="display:flex;   align-items: center;
+            justify-content: center;">
+
+                <a href="/home">
+                    <h1 class="indexLink" style="--dur:5s;--int:0s; --clr: rgb(31, 81, 255)">HOME PAGE</h1>
+                </a>
+                <a href="https://open.spotify.com/show/6ZkUOZ48U44T4pnxuewZ04?si=44af767836384039">
+                    <h1 class="indexLink" style="--dur: 15s;--int:0s; --clr:#25d366">LISTEN</h1>
+                </a>
+                <a href="https://www.instagram.com/thethreesixo/">
+                    <h1 class="indexLink" style="--dur:12s; --int:0s; --clr:#c32aa3">INSTAGRAM</h1>
+                </a>
             </div>
-            <div style="padding-bottom: 50px;">
-                <h1 class="neonText">
-                    HOSTS
-                </h1>
-
-                <div style="display:flex">
-                    <figure class="host">
-                        <a href="https://www.instagram.com/evan_couch33/">
-                            <img class="hostIMG" src="generic-hispanic-boy.jpg" hspace="auto" alt="Evan">
-                            <figcaption>
-                                <h1 class="epiTitle">EVAN COUCH</h1>
-                            </figcaption>
-                        </a>
-                    </figure>
-
-                    <figure class="host">
-                        <a href="https://www.instagram.com/brevinross/">
-                            <img class="hostIMG" src="generic-white-boy.jpg" hspace="auto" alt="Brevin">
-                            <figcaption>
-                                <h1 class="epiTitle">BREVIN ROSS</h1>
-                            </figcaption>
-                        </a>
-                    </figure>
-
-                    <figure class="host">
-                        <a href="https://www.instagram.com/max_pickles/">
-                            <img class="hostIMG" src="generic-asian-boy.png" hspace="auto" alt="Max">
-                            <figcaption>
-                                <h1 class="epiTitle">MAX PICKARD</h1>
-                            </figcaption>
-                        </a>
-                    </figure>
-                </div>
-
-            </div>
-
-            <h1 class="neonText">
-                FOLLOW US
-            </h1>
-            <div class="ico">
-                <ul>
-                    <li style="--clr:#c32aa3">
-                        <a href="https://www.instagram.com/thethreesixo/">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li style="--clr:#25d366">
-                        <a href="https://open.spotify.com/show/6ZkUOZ48U44T4pnxuewZ04?si=44af767836384039">
-                            <i class="fa-brands fa-spotify"></i>
-                        </a>
-                    </li>
-                    <li style="--clr:#ff0000">
-                        <a href="https://open.spotify.com/show/6ZkUOZ48U44T4pnxuewZ04?si=44af767836384039">
-                            <i class="fa-brands fa-youtube"></i>
-                        </a>
-                    </li>
-                </ul>
-
-
-
-            </div>
-
             <%- include('./partials/footer.ejs') %>
+        </div>
+
+
     </body>
 
 </html>

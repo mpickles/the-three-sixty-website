@@ -28,21 +28,18 @@ app.use((req, res, next) => {
 const episode_index_home = (req, res) => {
     Episode.find().sort({ createdAt: -1 })
         .then(result => {
-            res.render('index.ejs', { latest_episode: result[0], title: 'Home' });
+            res.render('home.ejs', { latest_episode: result[0], title: 'Home' });
         })
         .catch(err => {
             console.log(err);
         });
 }
 
+app.get('/', (req, res) => {
+    res.render('index', { title: 'Welcome' });
+});
 
-// routes
-// app.get('/', (req, res) => {
-//     res.render('index', { title: 'Home' })
-//     app.Router().get('/', episode_index_home);
-// });
-
-app.get('/', episode_index_home);
+app.get('/home', episode_index_home);
 
 app.get('/about', (req, res) => {
     res.render('about', { title: 'About' });

@@ -1,0 +1,55 @@
+/* episode styles */
+.epiTitle {
+    color: white;
+    font-family: var(--font);
+    font-weight: lighter;
+    margin: 0;
+    padding: 0;
+    width: fit-content;
+    font-size: 60px;
+    position: relative;
+    position: relative;
+    text-shadow: 0 0 7px var(--clr),
+        0 0 10px var(--clr),
+        0 0 21px var(--clr),
+        0 0 42px var(--clr),
+        0 0 82px var(--clr),
+        0 0 92px var(--clr),
+        0 0 102px var(--clr),
+        0 0 151px var(--clr);
+    ;
+    animation: animate 10s var(--int) infinite alternate;
+}
+
+.spotMain {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    position: center;
+}
+
+.desc {
+    color: white;
+    margin: 0;
+    padding: 10px;
+    word-wrap: break-word;
+    border-radius: 25px;
+    background-color: rgb(27, 27, 32);
+}
+
+.episodes a {
+    display: block;
+    margin: 40px 0;
+    padding-left: 50px;
+    padding-top: 10px;
+    border-left: 10px solid rgb(223, 0, 254);
+    background-color: rgb(27, 27, 32);
+}
+
+.episodes a:hover {
+    color: var(--blue);
+    box-shadow: 0px 0px 20px 20px var(--purple);
+    transform: scale(1.01);
+    transition: 0.5s;
+}
