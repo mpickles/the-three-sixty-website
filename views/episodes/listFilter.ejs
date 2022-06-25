@@ -6,13 +6,14 @@
             <div class="episodes content">
                 <h1 class=" neonText" style="--clr: var(--blue); --int:1s;">ALL EPISODES</h1>
 
+                <!-- filter -->
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
+
                 <ul id="myUL" style="list-style-type: none;"></ul>
                 <% if (episodes.length> 0) {%>
                     <% episodes.forEach(episode=> {;%>
                         <li style="display:block; padding:-10px;">
-
                             <a class="single" href="/episodes/<%=episode._id %> " style="border-radius: 25px;">
-
                                 <div id="content">
                                     <h2 class=" epiTitle" style="border-radius: 25px; --clr: var(--purple); --int: 5s">
                                         <%=episode.title%> - <%=episode.subtitle%>
@@ -21,9 +22,7 @@
                                         <%= episode.description %>
                                     </h3>
                                 </div>
-
                             </a>
-
                         </li>
                         </ul>
                         <%})%>
@@ -35,7 +34,8 @@
             <%- include('../partials/footer.ejs') %>
     </body>
     <script>
-
+        function myFunction() {
+        }
     </script>
 
 </html>
