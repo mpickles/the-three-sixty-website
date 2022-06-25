@@ -1,15 +1,16 @@
 <html lang="en">
 <%- include('../partials/head.ejs') %>
 
+
     <body>
         <%- include('../partials/nav.ejs') %>
-            <div class="episodes content" style="--int:1s;">
-                <h1 class=" neonText" style="--clr: var(--blue);">ALL EPISODES</h1>
+            <div class="episodes content">
+                <h1 class=" neonText" style="--clr: var(--blue); --int:1s;">ALL EPISODES</h1>
                 <% if (episodes.length> 0) {%>
-                    <% episodes.forEach(episode=> { %>
+                    <% episodes.forEach(episode=> {;%>
                         <a class="single" href="/episodes/<%=episode._id %> "
                             style="border-radius: 25px; padding: 10px">
-                            <h2 class="title" style="border-radius: 25px;">
+                            <h2 class="epiTitle" style="border-radius: 25px; --clr: var(--purple); --int: 5s">
                                 <%=episode.title%> - <%=episode.subtitle%>
                             </h2>
                             <h3 class="desc">
@@ -18,7 +19,7 @@
                         </a>
                         <%})%>
                             <% } else { %>
-                                <p>There are no episodes to display</p>
+                                <p class="epiTitle">There are no episodes to display</p>
                                 <% }%>
 
             </div>
