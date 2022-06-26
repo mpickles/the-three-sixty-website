@@ -37,8 +37,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    width: vw;
-    height: vh;
+    width: auto;
+    height: auto;
     max-width: em;
     margin: 0px auto;
     padding-left: 50px;
@@ -57,6 +57,12 @@ figcaption {
     padding: 0;
     text-decoration: none;
     color: white;
+}
+
+div {
+    width: vw;
+    height: vh;
+
 }
 
 .neonText {
