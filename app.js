@@ -10,7 +10,9 @@ const app = express();
 // connect to mongodb & listen for requests
 const dbURI = "mongodb+srv://testUser:test1234@nodetuts.msvhb.mongodb.net/nodetuts?retryWrites=true&w=majority" //place name of db after .net
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })  //async task
-    .then((result) => app.listen(3000))
+    .then((result) => app.listen(process.env.PORT || 3000, function () {
+        console.log("SERVER STARTED PORT 3000")
+    }))
     .catch((err) => console.log(err))
 
 // register view engine
