@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const Episode = require('./models/episode');
 const episodeRoutes = require('./routes/episodeRoutes')
-
+require('dotenv').config()
 // express app
 const app = express();
 
