@@ -14,7 +14,7 @@
                 <ul id="myUL" style="list-style-type: none;"></ul>
                 <% if (episodes.length> 0) {%>
                     <% episodes.forEach(episode=> {;%>
-                        <li style="display:block; margin: 0;">
+                        <li1 style="display:block; margin: 0;">
                             <a class="single" href="/episodes/<%=episode._id %> " style="border-radius: 25px;">
                                 <div class="content">
                                     <h2 class=" epiTitle" style="border-radius: 25px; --clr: var(--purple); --int: 5s">
@@ -28,7 +28,7 @@
 
                             </a>
 
-                        </li>
+                        </li1>
                         </ul>
                         <%})%>
                             <% } else { %>
@@ -44,7 +44,7 @@
             var input = document.getElementById('myInput');
             input.onkeyup = function () {
                 var filter = input.value.toUpperCase();
-                var lis = document.getElementsByTagName('li');
+                var lis = document.getElementsByTagName('li1');
                 console.log(lis)
                 for (var i = 0; i < lis.length; i++) {
                     var content = lis[i].innerText;

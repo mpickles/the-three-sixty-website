@@ -41,8 +41,8 @@ body {
     height: auto;
     max-width: em;
     margin: 0px auto;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
@@ -142,6 +142,12 @@ figcaption {
 
 /* If the screen size is 601px or more, set the font-size of <div> to 80px */
 @media only screen and (min-width: 601px) {
+
+    body {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
     .logo {
         font-size: 100px;
     }
@@ -214,16 +220,21 @@ figcaption {
 
 /* If the screen size is 600px or less */
 @media only screen and (max-width: 600px) {
+    body {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
     .logo {
-        font-size: 12vw;
+        font-size: 13vw;
     }
 
     .neonText {
-        font-size: 6vw;
+        font-size: 8vw;
     }
 
     .headerCon {
-        font-size: 1.75vw;
+        font-size: 3vw;
     }
 
     .hostIMG {
@@ -232,11 +243,11 @@ figcaption {
     }
 
     .epiTitle {
-        font-size: 5.5vw;
+        font-size: 7vw;
     }
 
     .desc {
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
 
     #myInput {
