@@ -6,9 +6,6 @@
     margin: 0;
     padding: 0;
     width: fit-content;
-    /* font-size: 5.5vw; */
-    font-size: 60px;
-    position: relative;
     position: relative;
     text-shadow: 0 0 7px var(--clr),
         0 0 10px var(--clr),
@@ -32,8 +29,10 @@
 
 .desc {
     color: white;
-    margin: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
     padding-top: 10px;
+    padding-left: 10px;
     word-wrap: break-word;
     border-radius: 25px;
     background-color: rgb(27, 27, 32);
@@ -41,10 +40,10 @@
 
 .episodes a {
     display: block;
-    margin: 40px 0;
-    padding-left: 50px;
+    margin: 20px 0;
     padding-top: 10px;
-    border-left: 10px solid rgb(223, 0, 254);
+    border-bottom: 10px solid rgb(27, 27, 32);
+    border-left: 10px solid var(--purple);
     background-color: rgb(27, 27, 32);
 }
 
@@ -57,12 +56,7 @@
 
 #myInput {
     background-image: url(/images/searchIcon.png);
-    /* background-size: 1.5vh; */
-    background-size: 16px;
-    background-position: 12px 15px;
     background-repeat: no-repeat;
-    /* width: 50vw; */
-    width: 25%;
     border-radius: 25px;
     font-size: 1.5vw;
     padding: 12px 20px 12px 40px;

@@ -5,12 +5,9 @@
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    width: em;
 }
 
 .indexIMG {
-    width: calc(750px - 10vw);
-    height: calc(750px - 10vw);
     max-width: 750px;
     max-height: 750px;
     position: relative;
@@ -19,22 +16,17 @@
     margin-right: auto;
     left: 0;
     right: 0;
-    margin-bottom: -50px;
 }
 
 .indexLink {
     color: white;
     font-family: var(--font);
     font-weight: lighter;
-    margin-left: 25px;
-    margin-right: 25px;
     padding: 0;
-    width: fit-content;
+    margin: auto;
     text-decoration: none;
-    font-size: 5em;
     position: relative;
     text-align: center;
-    bottom: 20px;
     text-shadow: 0 0 7px var(--clr),
         0 0 10px var(--clr),
         0 0 21px var(--clr),

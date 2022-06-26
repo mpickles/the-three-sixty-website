@@ -57,7 +57,7 @@ figcaption {
     padding: 0;
     text-decoration: none;
     color: white;
-    font-size: 1.5em
+    font-size: larger;
 }
 
 .neonText {
@@ -68,8 +68,6 @@ figcaption {
     padding: 0;
     width: fit-content;
     text-decoration: none;
-    /* font-size: 5.4vw; */
-    font-size: 60px;
     position: relative;
     bottom: 20px;
     text-shadow: 0 0 7px var(--clr),
@@ -91,24 +89,10 @@ figcaption {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    /* font-size: 11vw; */
-    font-size: 100px;
     font-weight: lighter;
     text-shadow: var(--blue-glow);
     animation: animateLogo 45s var(--int) infinite alternate;
 }
-
-/* .sub {
-    color: white;
-    font-family: var(--font);
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    font-size: 4vw;
-    font-weight: lighter;
-    text-shadow: var(--purple-glow);
-} */
 
 .title {
     color: white;
@@ -121,8 +105,6 @@ figcaption {
     margin: 0;
     padding: 0;
     display: block;
-    /* font-size: 1.5vw; */
-    font-size: 30px;
 }
 
 /* host styles */
@@ -131,10 +113,6 @@ figcaption {
 }
 
 .hostIMG {
-    /* width: 25vw;
-    height: 25vw; */
-    width: 256px;
-    height: 256px;
     margin-bottom: 20px;
     border-radius: 10px;
 }
@@ -154,4 +132,153 @@ figcaption {
     text-align: center;
 }
 
-@media (max-width: 600px) {}
+.aboutImage {
+    width: 30em;
+    height: 30em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* If the screen size is 601px or more, set the font-size of <div> to 80px */
+@media only screen and (min-width: 601px) {
+    .logo {
+        font-size: 100px;
+    }
+
+    .neonText {
+        font-size: 65px;
+    }
+
+    .headerCon {
+        font-size: 30px;
+    }
+
+    .hostIMG {
+        width: 256px;
+        height: 256px;
+
+    }
+
+    .epiTitle {
+        font-size: 60px;
+    }
+
+    .desc {
+        font-size: larger;
+    }
+
+    #myInput {
+        background-position: 12px 20px;
+        background-size: 20px;
+        width: 25%;
+    }
+
+    .aboutImage {
+        width: 30em;
+        height: 30em;
+    }
+
+    .ico ul {
+        gap: 2em
+    }
+
+    .host {
+        text-align: center;
+        margin: 25px;
+    }
+
+    .hostSec {
+        padding-bottom: 50px;
+    }
+
+    .ico ul li a {
+        font-size: 3em;
+    }
+
+    .ico ul li:hover a {
+        font-size: 3em;
+    }
+
+    .indexIMG {
+        width: calc(750px - 10vw);
+        height: calc(750px - 10vw);
+        margin-bottom: 0px;
+    }
+
+    .indexLink {
+        font-size: 5em;
+        bottom: 20px;
+    }
+}
+
+/* If the screen size is 600px or less */
+@media only screen and (max-width: 600px) {
+    .logo {
+        font-size: 12vw;
+    }
+
+    .neonText {
+        font-size: 6vw;
+    }
+
+    .headerCon {
+        font-size: 1.75vw;
+    }
+
+    .hostIMG {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .epiTitle {
+        font-size: 5.5vw;
+    }
+
+    .desc {
+        font-size: 2vw;
+    }
+
+    #myInput {
+        background-size: 1.5vh;
+        background-position: 12px 10px;
+        width: 50vw;
+    }
+
+    .aboutImage {
+        width: 75vw;
+        height: 75vw;
+    }
+
+    .ico ul {
+        gap: 5vw
+    }
+
+    .host {
+        text-align: center;
+        margin: 1vw;
+    }
+
+    .hostSec {
+        padding-bottom: 3vh;
+    }
+
+    .ico ul li a {
+        font-size: 7vw;
+    }
+
+    .ico ul li:hover a {
+        font-size: 7vw;
+    }
+
+    .indexIMG {
+        width: 100vw;
+        height: 100vw;
+        margin-bottom: 1vh;
+    }
+
+    .indexLink {
+        font-size: 15vw;
+        bottom: 2vh;
+    }
+}
