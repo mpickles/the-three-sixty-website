@@ -6,7 +6,7 @@
     margin: 0;
     padding: 0;
     width: fit-content;
-    font-size: 60px;
+    font-size: 5.5vw;
     position: relative;
     position: relative;
     text-shadow: 0 0 7px var(--clr),
@@ -56,12 +56,12 @@
 
 #myInput {
     background-image: url(/images/searchIcon.png);
-    background-size: 20px;
+    background-size: 1.5vh;
     background-position: 12px 15px;
     background-repeat: no-repeat;
-    width: 25%;
+    width: 50vw;
     border-radius: 25px;
-    font-size: 20px;
+    font-size: 1.5vw;
     padding: 12px 20px 12px 40px;
     margin-bottom: 12px;
     margin-top: 12px;
