@@ -4,16 +4,19 @@
     <body>
         <%- include('../partials/nav.ejs') %>
             <div class="episodes content">
-                <h1 class=" neonText" style="--clr: var(--blue); --int:1s;">ALL EPISODES</h1>
+                <div style="display:block; align-items: center; margin-top: -20px;">
+                    <h1 class=" neonText" style="--clr: var(--blue); --int:1s; bottom: 0px">ALL EPISODES</h1>
+                    <!-- filter -->
+                    <input class="desc" style="bottom: 20px;" type="text" id="myInput" onkeyup="myFunction()"
+                        placeholder="SEARCH">
+                </div>
 
                 <ul id="myUL" style="list-style-type: none;"></ul>
                 <% if (episodes.length> 0) {%>
                     <% episodes.forEach(episode=> {;%>
-                        <li style="display:block; padding:-10px;">
-
+                        <li style="display:block; margin: 0;">
                             <a class="single" href="/episodes/<%=episode._id %> " style="border-radius: 25px;">
-
-                                <div id="content">
+                                <div class="content">
                                     <h2 class=" epiTitle" style="border-radius: 25px; --clr: var(--purple); --int: 5s">
                                         <%=episode.title%> - <%=episode.subtitle%>
                                     </h2>
@@ -34,8 +37,24 @@
             </div>
             <%- include('../partials/footer.ejs') %>
     </body>
-    <script>
 
+    <script>
+        function myFunction() {
+            var input = document.getElementById('myInput');
+            input.onkeyup = function () {
+                var filter = input.value.toUpperCase();
+                var lis = document.getElementsByTagName('li');
+                console.log(lis)
+                for (var i = 0; i < lis.length; i++) {
+                    var content = lis[i].innerText;
+
+                    if (content.toUpperCase().indexOf(filter) != -1)
+                        lis[i].style.display = 'block';
+                    else
+                        lis[i].style.display = 'none';
+                }
+            }
+        }
     </script>
 
 </html>
