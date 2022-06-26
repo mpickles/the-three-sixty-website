@@ -37,8 +37,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    width: auto;
-    height: auto;
+    width: vw;
+    height: vh;
     max-width: em;
     margin: 0px auto;
     padding-left: 50px;
