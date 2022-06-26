@@ -57,6 +57,7 @@ figcaption {
     padding: 0;
     text-decoration: none;
     color: white;
+    font-size: 1.5em
 }
 
 .neonText {
@@ -67,7 +68,8 @@ figcaption {
     padding: 0;
     width: fit-content;
     text-decoration: none;
-    font-size: 5.4vw;
+    /* font-size: 5.4vw; */
+    font-size: 60px;
     position: relative;
     bottom: 20px;
     text-shadow: 0 0 7px var(--clr),
@@ -89,13 +91,14 @@ figcaption {
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-size: 11vw;
+    /* font-size: 11vw; */
+    font-size: 100px;
     font-weight: lighter;
     text-shadow: var(--blue-glow);
     animation: animateLogo 45s var(--int) infinite alternate;
 }
 
-.sub {
+/* .sub {
     color: white;
     font-family: var(--font);
     background-color: transparent;
@@ -105,7 +108,7 @@ figcaption {
     font-size: 4vw;
     font-weight: lighter;
     text-shadow: var(--purple-glow);
-}
+} */
 
 .title {
     color: white;
@@ -118,7 +121,8 @@ figcaption {
     margin: 0;
     padding: 0;
     display: block;
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
+    font-size: 30px;
 }
 
 /* host styles */
@@ -127,8 +131,10 @@ figcaption {
 }
 
 .hostIMG {
-    width: 25vw;
-    height: 25vw;
+    /* width: 25vw;
+    height: 25vw; */
+    width: 256px;
+    height: 256px;
     margin-bottom: 20px;
     border-radius: 10px;
 }
